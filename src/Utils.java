@@ -22,6 +22,15 @@ public class Utils {
 		}
 		return maxValue;
 	}
+	public static int maxMatrix(int[][] matrix){
+		int maxValue = matrix[0][0];
+		for(int i = 1; i< matrix.length; i++){
+			for(int j = 1; j < matrix[0].length; j++){
+				maxValue = Math.max(maxValue, matrix[i][j]);
+			}
+		}
+		return maxValue;
+	}
 	public static void swap(int[] array, int i, int j){
 		int temp = array[i];
 		array[i] = array[j];
