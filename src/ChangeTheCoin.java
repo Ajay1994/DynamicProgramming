@@ -22,8 +22,8 @@ public class ChangeTheCoin {
 		
 		if(sum < 0 || count < 0) return 0;
 		if(dp[count][sum] != -1) return dp[count][sum];
-		dp[count][sum] = getChange(array, dp, sum - array[count - 1], count) 
-						+ getChange(array, dp, sum, count - 1);
+		dp[count][sum] =Math.min(1+getChange(array, dp, sum - array[count - 1], count) 
+						, getChange(array, dp, sum, count - 1));
 		return dp[count][sum];
 	}
 
